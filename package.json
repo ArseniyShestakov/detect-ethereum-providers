@@ -1,0 +1,52 @@
+{
+  "name": "detect-ethereum-providers",
+  "version": "0.0.1",
+  "description": "Returns list of all injected Ethereum providers",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "lint": "eslint . --ext ts,js,json",
+    "lint:fix": "yarn lint --fix",
+    "build": "npm-run-all build:*",
+    "build:0-clean": "tsc --build --clean",
+    "build:1-compile": "tsc --project .",
+    "build:2-browsify": "browserify -s detectEthereumProviders dist/detect.js > dist/detect-ethereum-providers.js",
+    "build:3-minify": "browserify -s detectEthereumProviders -p tinyify dist/detect.js > dist/detect-ethereum-providers.min.js",
+    "test": "npm-run-all test:*",
+    "test:0-javascript": "mocha ./test/*.spec.js",
+    "test:1-typescript": "mocha --compilers ts:ts-node/register ./test/*.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arseniyshestakov/detect-ethereum-providers.git"
+  },
+  "keywords": [
+    "ethereum",
+    "web3",
+    "dapp",
+    "blockchain"
+  ],
+  "author": "Arseniy Shestakov <me@arseniyshestakov.com> (https://arseniyshestakov.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arseniyshestakov/detect-ethereum-providers/issues"
+  },
+  "homepage": "https://github.com/arseniyshestakov/detect-ethereum-providers#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "browserify": "^17.0.0",
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "mocha": "^9.1.1",
+    "npm-run-all": "^4.1.5",
+    "sinon": "^11.1.2",
+    "tinify": "^1.6.0-beta.2",
+    "tinyify": "^3.0.0",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  }
+}

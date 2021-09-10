@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "inlineSourceMap": true,
+    "module": "CommonJS",
+    "outDir": "dist",
+    "strict": true,
+    "target": "ES2018"
+  },
+  "include": [
+    "./src/*.ts",
+  ]
+}
