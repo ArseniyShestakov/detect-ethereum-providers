@@ -14,7 +14,7 @@
     "build:3-minify": "browserify -s detectEthereumProviders -p tinyify dist/detect.js > dist/detect-ethereum-providers.min.js",
     "test": "npm-run-all test:*",
     "test:0-javascript": "mocha ./test/*.spec.js",
-    "test:1-typescript": "mocha --compilers ts:ts-node/register ./test/*.spec.ts",
+    "test:1-typescript": "mocha -r ts-node/register ./test/*.spec.ts",
     "release": "release-it"
   },
   "repository": {
@@ -34,6 +34,9 @@
   },
   "homepage": "https://github.com/arseniyshestakov/detect-ethereum-providers#readme",
   "devDependencies": {
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^9.0.0",
+    "@types/sinon": "^10.0.2",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
     "browserify": "^17.0.0",

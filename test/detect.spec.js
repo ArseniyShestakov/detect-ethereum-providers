@@ -50,7 +50,6 @@ describe('getEthereumProviderIds: window object without ethereum', function() {
 describe('getEthereumProviderIds: window object with MetaMask', function() {
   mockWindowObject(windowWithoutExtraProviders, providerWithMetaMask);
   const providers = getEthereumProviderIds();
-  console.log(providers);
 
   it('should be array', function() {
     assert.isArray(providers);
@@ -68,7 +67,6 @@ describe('getEthereumProviderIds: window object with MetaMask', function() {
 describe('getEthereumProviderIds: window with three providers', function() {
   mockWindowObject(windowWithTwoExtraProviders, providerWithMetaMask);
   const providers = getEthereumProviderIds();
-  console.log(providers);
 
   it('should be array', function() {
     assert.isArray(providers);
