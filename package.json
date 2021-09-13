@@ -15,7 +15,7 @@
     "test": "npm-run-all test:*",
     "test:0-javascript": "mocha ./test/*.spec.js",
     "test:1-typescript": "mocha -r ts-node/register ./test/*.spec.ts",
-    "release": "release-it"
+    "release": "dotenv release-it --"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
     "@typescript-eslint/parser": "^4.31.0",
     "browserify": "^17.0.0",
     "chai": "^4.3.4",
+    "dotenv-cli": "^4.0.0",
     "eslint": "^7.32.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-json": "^3.1.0",
