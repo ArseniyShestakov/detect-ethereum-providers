@@ -14,7 +14,8 @@
     "build:3-minify": "browserify -s detectEthereumProviders -p tinyify dist/detect.js > dist/detect-ethereum-providers.min.js",
     "test": "npm-run-all test:*",
     "test:0-javascript": "mocha ./test/*.spec.js",
-    "test:1-typescript": "mocha --compilers ts:ts-node/register ./test/*.spec.ts"
+    "test:1-typescript": "mocha --compilers ts:ts-node/register ./test/*.spec.ts",
+    "release": "release-it"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "eslint-plugin-node": "^11.1.0",
     "mocha": "^9.1.1",
     "npm-run-all": "^4.1.5",
+    "release-it": "^14.11.5",
     "sinon": "^11.1.2",
     "tinify": "^1.6.0-beta.2",
     "tinyify": "^3.0.0",
