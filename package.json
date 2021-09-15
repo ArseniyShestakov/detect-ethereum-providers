@@ -15,7 +15,8 @@
     "test": "npm-run-all test:*",
     "test:0-javascript": "mocha ./test/*.spec.js",
     "test:1-typescript": "mocha -r ts-node/register ./test/*.spec.ts",
-    "release": "dotenv release-it --"
+    "release": "dotenv release-it --",
+    "release:dry-run": "dotenv release-it -- --dry-run"
   },
   "repository": {
     "type": "git",
